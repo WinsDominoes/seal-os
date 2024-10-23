@@ -67,7 +67,7 @@ modules:
       - Blur my Shell
       - AppIndicator and KStatusNotifierItem Support
     uninstall:
-      - GSConnect 
+    #  - GSConnect 
 
   - type: gschema-overrides
     include:
