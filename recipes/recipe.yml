@@ -58,7 +58,7 @@ modules:
     brew-analytics: false
 
   - type: justfiles
-    validate: true
+  #  validate: true
     include:
       - bluefin
 

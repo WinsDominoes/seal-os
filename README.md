@@ -1,8 +1,6 @@
-# seal-os &nbsp; [![bluebuild build badge](https://github.com/winsdominoes/seal-os/actions/workflows/build.yml/badge.svg)](https://github.com/winsdominoes/seal-os/actions/workflows/build.yml)
+# Seal OS &nbsp; [![bluebuild build badge](https://github.com/winsdominoes/seal-os/actions/workflows/build.yml/badge.svg)](https://github.com/winsdominoes/seal-os/actions/workflows/build.yml)
 
-See the [BlueBuild docs](https://blue-build.org/how-to/setup/) for quick setup instructions for setting up your own repository based on this template.
-
-After setup, it is recommended you update this README to describe your custom image.
+A nice little ublue based distro for my liking. 
 
 ## Installation
 
@@ -31,8 +29,33 @@ To rebase an existing atomic Fedora installation to the latest build:
 The `latest` tag will automatically point to the latest build. That build will still always use the Fedora version specified in `recipe.yml`, so you won't get accidentally updated to the next major version.
 
 ## ISO
+### Docker
+```bash
+# ISO command:
+mkdir ./iso-output
+sudo docker run --rm --privileged --volume ./iso-output:/build-container-installer/build --pull=always \
+ghcr.io/jasonn3/build-container-installer:latest \
+# ISO config:
+IMAGE_REPO=ghcr.io/winsdominoes \
+IMAGE_NAME=seal-os \
+IMAGE_TAG=latest \
+VARIANT=Silverblue # should match the variant your image is based on
+```
+### Podman
+```bash
+# ISO command:
+mkdir ./iso-output
+sudo podman run --rm --privileged --volume ./iso-output:/build-container-installer/build --security-opt label=disable --pull=newer \
+ghcr.io/jasonn3/build-container-installer:latest \
+# iso config:
+IMAGE_REPO=ghcr.io/winsdominoes \
+IMAGE_NAME=seal-os \
+IMAGE_TAG=latest \
+VARIANT=Silverblue
+```
 
-If build on Fedora Atomic, you can generate an offline ISO with the instructions available [here](https://blue-build.org/learn/universal-blue/#fresh-install-from-an-iso). These ISOs cannot unfortunately be distributed on GitHub for free due to large sizes, so for public projects something else has to be used for hosting.
+### Fedora Atomic
+[https://blue-build.org/learn/universal-blue/#fresh-install-from-an-iso](https://blue-build.org/learn/universal-blue/#fresh-install-from-an-iso)
 
 ## Verification
 
@@ -41,3 +64,7 @@ These images are signed with [Sigstore](https://www.sigstore.dev/)'s [cosign](ht
 ```bash
 cosign verify --key cosign.pub ghcr.io/winsdominoes/seal-os
 ```
+
+## Documentation
+
+[BlueBuild docs](https://blue-build.org/how-to/setup/)
