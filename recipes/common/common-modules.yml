@@ -47,11 +47,6 @@ modules:
     nofile-limits: true
     brew-analytics: false
 
-  - type: justfiles
-  #  validate: true
-    include:
-      - bluefin
-
   - type: gnome-extensions
     install:
       - Blur my Shell
