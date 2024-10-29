@@ -39,7 +39,7 @@ ghcr.io/jasonn3/build-container-installer:latest \
 IMAGE_REPO=ghcr.io/winsdominoes \
 IMAGE_NAME=seal-os \
 IMAGE_TAG=latest \
-VARIANT=Silverblue # should match the variant your image is based on
+VARIANT=bluefin-dx # should match the variant your image is based on
 ```
 ### Podman
 ```bash
@@ -51,7 +51,7 @@ ghcr.io/jasonn3/build-container-installer:latest \
 IMAGE_REPO=ghcr.io/winsdominoes \
 IMAGE_NAME=seal-os \
 IMAGE_TAG=latest \
-VARIANT=Silverblue
+VARIANT=bluefin-dx
 ```
 
 ### Fedora Atomic
