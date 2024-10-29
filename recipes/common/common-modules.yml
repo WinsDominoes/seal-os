@@ -11,6 +11,10 @@ modules:
     install:
       - micro
       - hyprland
+      - xdg-desktop-portal-hyprland
+      - hyprpaper
+      - hyprlock
+      - hypridle
       - fuzzel
       - waybar
       - codium
