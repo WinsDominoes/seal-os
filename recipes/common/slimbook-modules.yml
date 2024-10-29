@@ -4,3 +4,9 @@ modules:
       - https://download.opensuse.org/repositories/home:/Slimbook/Fedora_40/home:Slimbook.repo
     install:
       - slimbook-meta-gnome
+   - type: systemd
+     # this example disables automatic flatpak updates and enables a custom service unit for all users
+     system:
+       enabled:
+         - slimbook-settings.servvice
+         - slimbook-service.service
