@@ -8,5 +8,5 @@ modules:
      # this example disables automatic flatpak updates and enables a custom service unit for all users
     system:
       enabled:
-       - slimbook-settings.servvice
-       - slimbook-service.service
+       - slimbook-settings
+       - slimbook-service
