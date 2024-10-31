@@ -1,5 +1,5 @@
-name: seal-os
-description: Operating system designed for Seals.
+name: seal-os-surface
+description: Operating system designed for Seals. - Surface Edition
 base-image: ghcr.io/ublue-os/bluefin-dx-surface
 image-version: latest 
 

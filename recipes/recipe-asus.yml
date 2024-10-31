@@ -1,5 +1,5 @@
-name: seal-os
-description: Operating system designed for Seals.
+name: seal-os-asus
+description: Operating system designed for Seals. - ASUS Devices
 base-image: ghcr.io/ublue-os/bluefin-dx-asus
 image-version: latest 
 

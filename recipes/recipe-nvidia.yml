@@ -1,5 +1,5 @@
-name: seal-os
-description: Operating system designed for Seals.
+name: seal-os-nvidia
+description: Operating system designed for Seals. - NVIDIA Edition
 base-image: ghcr.io/ublue-os/bluefin-dx-nvidia
 image-version: latest 
 

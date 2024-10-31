@@ -1,5 +1,5 @@
-name: seal-os
-description: Operating system designed for Seals.
+name: seal-os-t2
+description: Operating system designed for Seals. - T2 Macs Edition
 base-image: ghcr.io/ublue-os/bluefin-dx
 image-version: latest 
 
