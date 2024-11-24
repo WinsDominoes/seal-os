@@ -1,7 +1,7 @@
 modules:
   - type: rpm-ostree
     repos:
-      - https://download.opensuse.org/repositories/home:/Slimbook/Fedora_40/home:Slimbook.repo
+      - https://download.opensuse.org/repositories/home:/Slimbook/Fedora_41/home:Slimbook.repo
     install:
       - slimbook-meta-gnome
   - type: systemd
